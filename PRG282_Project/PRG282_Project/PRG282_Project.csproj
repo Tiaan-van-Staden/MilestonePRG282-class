@@ -46,37 +46,62 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="Data_Layer\DataHandler.cs" />
+    <Compile Include="Presentation_Layer\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="Presentation_Layer\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
+    <Compile Include="Presentation_Layer\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.cs">
+    <Compile Include="Presentation_Layer\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\ucCreateMod.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\ucCreateMod.Designer.cs">
+      <DependentUpon>ucCreateMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\ucUpdateMod.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\ucUpdateMod.Designer.cs">
+      <DependentUpon>ucUpdateMod.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ucCreate.cs">
+    <Compile Include="Presentation_Layer\ucCreateStdnt.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucCreate.Designer.cs">
-      <DependentUpon>ucCreate.cs</DependentUpon>
+    <Compile Include="Presentation_Layer\ucCreateStdnt.Designer.cs">
+      <DependentUpon>ucCreateStdnt.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucDatabase.cs">
+    <Compile Include="Presentation_Layer\ucDatabase.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucDatabase.Designer.cs">
+    <Compile Include="Presentation_Layer\ucDatabase.Designer.cs">
       <DependentUpon>ucDatabase.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmLogin.resx">
+    <Compile Include="Presentation_Layer\ucUpdateStdnt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\ucUpdateStdnt.Designer.cs">
+      <DependentUpon>ucUpdateStdnt.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Presentation_Layer\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
+    <EmbeddedResource Include="Presentation_Layer\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\ucCreateMod.resx">
+      <DependentUpon>ucCreateMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\ucUpdateMod.resx">
+      <DependentUpon>ucUpdateMod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,11 +113,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ucCreate.resx">
-      <DependentUpon>ucCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Presentation_Layer\ucCreateStdnt.resx">
+      <DependentUpon>ucCreateStdnt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucDatabase.resx">
+    <EmbeddedResource Include="Presentation_Layer\ucDatabase.resx">
       <DependentUpon>ucDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\ucUpdateStdnt.resx">
+      <DependentUpon>ucUpdateStdnt.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -112,6 +140,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\DefaultUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Logic_Layer\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

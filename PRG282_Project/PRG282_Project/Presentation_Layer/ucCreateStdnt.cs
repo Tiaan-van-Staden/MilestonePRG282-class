@@ -20,6 +20,7 @@ namespace PRG282_Project
         private void picStudent_Click(object sender, EventArgs e)
         {
             //TODO: add code to save pic
+            MessageBox.Show("Insert code to save image", "Remove this message when done with code");
         }
 
         private void rbnMale_CheckedChanged(object sender, EventArgs e)
@@ -40,19 +41,25 @@ namespace PRG282_Project
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void ucCreate_Load(object sender, EventArgs e)
         {
+            cmbModules.DropDownStyle = ComboBoxStyle.DropDownList;
+            //cmbSearch.SelectedItem = "Search for Student ID"; //text instead of item value
+            cmbModules.SelectedIndex = 0;
 
         }
 
-        private void label9_Click(object sender, EventArgs e)
+        private void btnSubmit_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
+            //TODO: Check for empty fields
+            //TODO: Save to database
+            tbxID.Text = "";
+            tbxFullname.Text = "";
+            rbnMale.Checked = false;
+            rbnFemale.Checked = false;
+            tbxPhone.Text = "";
+            tbxAddress.Text = "";
+            picStudent.Image = PRG282_Project.Properties.Resources.DefaultUser; //reset picStudent to default.
         }
     }
 }

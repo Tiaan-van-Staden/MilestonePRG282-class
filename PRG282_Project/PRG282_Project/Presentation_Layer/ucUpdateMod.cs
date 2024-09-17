@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace PRG282_Project.Presentation_Layer
+{
+    public partial class ucUpdateMod : UserControl
+    {
+        public ucUpdateMod()
+        {
+            InitializeComponent();
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            //TODO: Check empty fields
+            //TODO: Update Module
+            tbxCode.Text = "";
+            tbxDesc.Text = "";
+            tbxLink.Text = "";
+            tbxName.Text = "";
+        }
+    }
+}

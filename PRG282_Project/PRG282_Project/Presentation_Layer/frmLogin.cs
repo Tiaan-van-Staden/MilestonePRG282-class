@@ -25,6 +25,9 @@ namespace PRG282_Project
             btnLogin.Visible = false;
             btnShowRegister.Visible = false;
             this.Height = 630;
+            tbxUsername.Text = "";
+            tbxPassw1.Text = "";
+            tbxPassw2.Text = "";
         }
 
 
@@ -36,6 +39,9 @@ namespace PRG282_Project
             btnLogin.Visible = true;
             btnShowRegister.Visible = true;
             this.Height = 550;
+            tbxUsername.Text = "";
+            tbxPassw1.Text = "";
+            tbxPassw2.Text = "";
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
